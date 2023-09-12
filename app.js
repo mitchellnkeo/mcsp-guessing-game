@@ -59,10 +59,6 @@ function gamePlay() {
  }
 } 
 
-// START GAME HERE
-gamePlay()
-
-
 // Function for replay
 function replayGame(){
     let replayAnswer = prompt("Would you like to play again?")
@@ -81,10 +77,13 @@ function compareStats(name, numGuesses){
 	    let scoreDifference = numGuesses - statObject[name]
 		if (scoreDifference < 0) {
         let scoreNumber = Math.abs(scoreDifference) 
-		alert("You guessed correctly with " + scoreNumber + " less attempts than last time.")
+		  alert("You guessed correctly with " + scoreNumber + " less attempts than last time.")
 		} else {
 		  alert("On your last round, you guessed correctly in " + statObject[name] + " guesses. Unforunately, this was not better.")
         } 
 	} 
 		statObject[name] = numGuesses
 }
+
+// START GAME HERE
+gamePlay()
